@@ -34,7 +34,7 @@
         // fix google search replaceState
         window.history._womginx_replaceState = window.history.replaceState;
         window.history.replaceState = function (stateObj, title, url) {
-            if (window.location.pathname.startsWith("/trump2021/https://www.google.com")) {
+            if (window.location.pathname.startsWith("/trump2020/https://www.google.com")) {
                 url = "";
             }
             return this._womginx_replaceState(stateObj, title, url);
@@ -226,7 +226,7 @@
         });
 
         var getProxyUrl = function () {
-            return window.location.href.match(/^https?:\/\/[^\/]+\/trump2021(\/[^_\/]+_)?\/(.*)/)[2];
+            return window.location.href.match(/^https?:\/\/[^\/]+\/trump2020(\/[^_\/]+_)?\/(.*)/)[2];
             // return window.location.href;
         };
         // unfortunately, I was not able to find another way of copying the window.location
